@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.css"
+    integrity="sha512-JEUoTOcC35/ovhE1389S9NxeGcVLIqOAEzlpcJujvyUaxvIXJN9VxPX0x1TwSo22jCxz2fHQPS1de8NgUyg+nA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Document</title>
 </head>
+
 <body>
   <header class="header">
     <div class="header__container">
@@ -36,7 +38,7 @@
           <a class="header__nav--tel" href="tel:18002652452">1800 265 24 52</a>
         </div>
       </div>
-    </div> 
+    </div>
   </header>
   <main>
     <section class="service">
@@ -44,8 +46,10 @@
         <h1>Get your vehicle service done online at one place</h1>
         <div class="service__search">
           <a class="service__button" href="#">Book a service</a>
-          <img src="./img/Play icon.svg" alt="play">
-          <p class="service__video--text">Play Video</p>
+          <a class="service__video" href="https://www.youtube.com/watch?v=eMhhl1Wq8JA&t=37299s" data-fancybox="gallery">
+            <img src="./img/Play icon.svg" alt="play">
+            <span class="service__video--text">Play Video</span>
+          </a>
         </div>
         <div class="service__open">
           <img class="service__open--img" src="./img/open-ico.svg" alt="watch">
@@ -67,7 +71,7 @@
               <p class="service__right--up2--dyedtext">4.5/5</p>
               <p class="service__right--up2--text">Rating</p>
             </div>
-            <img class="service__right--up2--img" src="./img/Stars.png" alt="stars">
+            <div class="rateYo"></div>
           </div>
         </div>
       </div>
@@ -112,8 +116,15 @@
         </ul>
       </div>
       <div class="offer__bottom">
-        <span class="offer__bottom--text">Learn about services</span>
-        <img class="offer__bottom--arrow" src="./img/arrow.svg" alt="arrow">
+        <a class="offer__bottom--arrow" href="">
+          <div>
+            <span class="offer__bottom--text">Learn about services</span>
+            <svg  width="53.003906" height="13.321777" viewBox="0 0 53.0039 13.3218" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path id="Icon" d="M49.58 5.66L45.63 1.71C45.24 1.31 45.24 0.69 45.63 0.29C46.03 -0.1 46.65 -0.1 47.05 0.29L52.7 5.95C53.1 6.34 53.1 6.97 52.7 7.36L47.05 13.02C46.65 13.42 46.03 13.42 45.63 13.02C45.24 12.62 45.24 12 45.63 11.61L49.58 7.66L0 7.66L0 5.66L49.58 5.66Z" fill="#1E1B1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          
+        </a>
       </div>
     </section>
     <section class="support">
@@ -132,7 +143,8 @@
           </div>
           <div>
             <p class="support__right--contain--heading">Get a Quote</p>
-            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real had half every.</p>
+            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real
+              had half every.</p>
           </div>
         </div>
         <div class="support__right--contain">
@@ -143,7 +155,8 @@
           </div>
           <div>
             <p class="support__right--contain--heading">Book an Appointment</p>
-            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real had half every.</p>
+            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real
+              had half every.</p>
           </div>
         </div>
         <div class="support__right--contain">
@@ -153,7 +166,8 @@
           </div>
           <div>
             <p class="support__right--contain--heading">Get your Service Done</p>
-            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real had half every.</p>
+            <p class="support__right--contain--title">Through True Rich Attended does no end it his mother since real
+              had half every.</p>
           </div>
         </div>
       </div>
@@ -208,134 +222,181 @@
     <section class="blog">
       <h2>Our blog</h2>
       <ul class="blog__title">
-        <li class="blog__title--text"><a href="#">Latest</a></li>
-        <li class="blog__title--text"><a href="#">Popular</a></li>
-        <li class="blog__title--text"><a href="#">Favorites</a></li>
+        <li><button class="blog__title--text blog__title--text--active" type="button" data-filter="all">Latest</button>
+        </li>
+        <li><button class="blog__title--text" type="button" data-filter=".blog__list--popular">Popular</button></li>
+        <li><button class="blog__title--text" type="button" data-filter=".blog__list--favorites">Favorites</button></li>
       </ul>
       <div class="blog__container">
         <ul class="blog__content">
-          <li class="blog__list">
-            <img src="./img/img1.png" alt="img">
+          <li class="mix  blog__list blog__list--favorites">
+            <div class="blog-image">
+              <img src="./img/img1.png" alt="img">
+              <ul class="blog-socials">
+                <li class="blog-images"><a href=""><img src="./img/facebook.svg" alt=""></a></li>
+                <li class="blog-images"><a class="blog-images" href=""><img src="./img/twitter.svg" alt=""></a></li>
+                <li class="blog-images"><a class="blog-images" href=""><img src="./img/instagram.svg" alt=""></a></li>
+                <li class="blog-images"><a class="blog-images" href=""><img src="./img/linkedin.svg" alt=""></a></li>
+              </ul>
+            </div>
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">5 Genius Car Accessories You Should Never Drive Without</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
-          <li class="blog__list">
+          <li class="mix  blog__list blog__list--favorites">
             <img src="./img/img2.png" alt="img">
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">5 Genius Car Accessories You Should Never Drive Without</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
-          <li class="blog__list">
+          <li class="mix blog__list blog__list--favorites">
             <img src="./img/img3.png" alt="img">
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">We provide blow straight past it with the wheels skidding</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
-          <li class="blog__list">
+          <li class="mix blog__list blog__list--popular">
             <img src="./img/img4.png" alt="img">
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">5 Genius Car Accessories You Should Never Drive Without</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
-          <li class="blog__list">
+          <li class="mix blog__list blog__list--popular">
             <img src="./img/img5.png" alt="img">
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">5 Genius Car Accessories You Should Never Drive Without</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
-          <li class="blog__list">
+          <li class="mix blog__list blog__list--popular">
             <img src="./img/img6.png" alt="img">
             <p class="blog__list--body">Posted on October 6th 2021</p>
             <p class="blog__list--title">5 Genius Car Accessories You Should Never Drive Without</p>
-            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models We provide a full range
+            <p class="blog__list--text">We provide a full range of front end mechanical repairs for all makes and models
+              We provide a full range
               of front end mechanical repairs for all makes and models</p>
           </li>
         </ul>
       </div>
     </section>
     <section class="review">
-      <h2 class="review__head">Our customers say the nicest things about our service</h2>
-      <div class="review__container">
-        <ul class="review__items">
-          <li class="review-list">
-            <div class="review-list--people">
-              <img src="./img/jonathan.svg" alt="jonathan">
-              <div>
-                <p class="review-list--people--name">Jonathan Vallem</p>
-                <p class="review-list--people--place">New york</p>
+      <div class="container">
+        <h2 class="review__head">Our customers say the nicest things about our service</h2>
+        <div class="review__items">
+          <div class="review__inner">
+            <div class="review-list">
+              <div class="review-list--people--img">
+                <div class="review-list--people">
+                  <p class="review-list--people--name">Jonathan Vallem</p>
+                  <p class="review-list--people--place">New york</p>
+                </div>
               </div>
+              <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at
+                what they do. Not only did
+                they repair my car in a short comprehensive look on all the working</p>
             </div>
-            <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at what they do. Not only did
-              they repair my car in a short comprehensive look on all the working</p>
-          </li>
-          <li class="review-list">
-            <div class="review-list--people">
-              <img src="./img/smith.svg" alt="smith">
-              <div>
-                <p class="review-list--people--name">Jonathan Vallem</p>
-                <p class="review-list--people--place">New york</p>
+          </div>
+          <div class="review__inner">
+            <div class="review-list">
+              <div class="review-list--people--img1">
+                <div class="review-list--people">
+                  <p class="review-list--people--name">Smith Johnson</p>
+                  <p class="review-list--people--place">New york</p>
+                </div>
               </div>
+              <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at
+                what they do. Not only did
+                they repair my car in a short comprehensive look on all the working</p>
             </div>
-            <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at what they do. Not only did
-              they repair my car in a short comprehensive look on all the working</p>
-          </li>
-        </ul>
-      </div>
-      <div class="review-bottom">
-        <ul class="review__bottom--lines">
-          <li><button class="review__bottom--lines--button"></button></li>
-          <li><button class="review__bottom--lines--button"></button></li>
-          <li><button class="review__bottom--lines--button--active"></button></li>
-          <li><button class="review__bottom--lines--button"></button></li>
-        </ul>
-        <ul class="review__bottom--arrows">
-          <li class="review__bottom--arrowleft"><img src="./img/Arrow-left.svg" alt="left"></li>
-          <li class="review__bottom--arrowright"><img src="./img/Arrow-right.svg" alt="right"></li>
-        </ul>
+          </div>
+          <div class="review__inner">
+            <div class="review-list">
+              <div class="review-list--people--img">
+                <div class="review-list--people">
+                  <p class="review-list--people--name">Jonathan Vallem</p>
+                  <p class="review-list--people--place">New york</p>
+                </div>
+              </div>
+              <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at
+                what they do. Not only did
+                they repair my car in a short comprehensive look on all the working</p>
+            </div>
+          </div>
+          <div class="review__inner">
+            <div class="review-list">
+              <div class="review-list--people--img1">
+                <div class="review-list--people">
+                  <p class="review-list--people--name">Jonathan Vallem</p>
+                  <p class="review-list--people--place">New york</p>
+                </div>
+              </div>
+              <p class="review-list--title">I have got my car repaired at Finsweet many times before, they are good at
+                what they do. Not only did
+                they repair my car in a short comprehensive look on all the working</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-bottom">
+          <div class="review__bottom--lines">
+          </div>
+          <div class="review__bottom--arrows">
+            <a class="review__bottom--arrow team__slider-prev" href=""><svg width="22.133301" height="13.321289" viewBox="0 0 22.1333 13.3213" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path id="Arrow" d="M3.41 7.66L7.36 11.61C7.76 12 7.76 12.62 7.36 13.02C6.97 13.42 6.35 13.42 5.95 13.02L0.29 7.36C-0.1 6.97 -0.1 6.34 0.29 5.95L5.95 0.29C6.35 -0.1 6.97 -0.1 7.36 0.29C7.76 0.69 7.76 1.31 7.36 1.71L3.41 5.66L21.13 5.66C21.69 5.66 22.13 6.1 22.13 6.66C22.13 7.22 21.69 7.66 21.13 7.66L3.41 7.66Z" fill="#1E1B1B" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg></a>
+            <a class="review__bottom--arrow team__slider-next" href=""><svg width="28.003906" height="13.321289" viewBox="0 0 28.0039 13.3213" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path id="Arrow" d="M1.02 7.64L1 7.66C0.43 7.66 0 7.22 0 6.66C0 6.1 0.43 5.66 1 5.66L1.02 5.68L1.02 7.64ZM25.58 6.66L20.63 1.71C20.24 1.31 20.24 0.69 20.63 0.29C21.03 -0.1 21.65 -0.1 22.05 0.29L27.7 5.95C28.1 6.34 28.1 6.97 27.7 7.36L22.05 13.02C21.65 13.42 21.03 13.42 20.63 13.02C20.24 12.62 20.24 12 20.63 11.61L25.58 6.66Z" fill="#1E1B1B" fill-opacity="1.000000" fill-rule="nonzero"/>
+              <path id="Arrow" d="M24.58 5.66L20.63 1.71C20.24 1.31 20.24 0.69 20.63 0.29C21.03 -0.1 21.65 -0.1 22.05 0.29L27.7 5.95C28.1 6.34 28.1 6.97 27.7 7.36L22.05 13.02C21.65 13.42 21.03 13.42 20.63 13.02C20.24 12.62 20.24 12 20.63 11.61L24.58 7.66L1 7.66C0.43 7.66 0 7.22 0 6.66C0 6.1 0.43 5.66 1 5.66L24.58 5.66Z" fill="#F2F2F2" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg></a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="questions">
       <h2 class="questions__heading">Frequently Asked Questions</h2>
-        <ul class="questions__container">
-          <li class="questions__list--active">
-            <div class="questions__list--top">
-              <p class="questions__list--heading">How long should a car repair take?</p>
-              <div class="questions__list--img"><img src="./img/Minus.svg" alt="minus"></div>
-            </div>
-            <p class="questions__list--title">I have got my car repaired at Finsweet many times before, they are good at what they do. Not only did
-              they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
-          </li>
-          <li class="questions__list">
-            <div class="questions__list--top">
-              <p class="questions__list--heading">How do I schedule my car's appointment ?</p>
-              <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-            </div>
-          </li>
-          <li class="questions__list">
-            <div class="questions__list--top">
-              <p class="questions__list--heading">What are the repair services provided?</p>
-              <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-            </div>
-          </li>
-          <li class="questions__list">
-            <div class="questions__list--top">
-              <p class="questions__list--heading">How do I find auto body shops near me?</p>
-              <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-            </div>
-          </li>
-          <li class="questions__list">
-            <div class="questions__list--top">
-              <p class="questions__list--heading">Genuine spare parts during car repair?</p>
-              <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-            </div>
-          </li>
-        </ul>
+      <ul class="questions__container">
+        <li class="questions__list--active">
+          <div class="questions__list--top">
+            <p class="questions__list--heading">How long should a car repair take?</p>
+            <div class="questions__list--img"><img src="./img/Minus.svg" alt="minus"></div>
+          </div>
+          <p class="questions__list--title">I have got my car repaired at Finsweet many times before, they are good at
+            what they do. Not only did
+            they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
+        </li>
+        <li class="questions__list">
+          <div class="questions__list--top">
+            <p class="questions__list--heading">How do I schedule my car's appointment ?</p>
+            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
+          </div>
+        </li>
+        <li class="questions__list">
+          <div class="questions__list--top">
+            <p class="questions__list--heading">What are the repair services provided?</p>
+            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
+          </div>
+        </li>
+        <li class="questions__list">
+          <div class="questions__list--top">
+            <p class="questions__list--heading">How do I find auto body shops near me?</p>
+            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
+          </div>
+        </li>
+        <li class="questions__list">
+          <div class="questions__list--top">
+            <p class="questions__list--heading">Genuine spare parts during car repair?</p>
+            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="form">
       <div class="form-top">
@@ -395,6 +456,14 @@
     </section>
   </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.js"
+  integrity="sha512-09bUVOnphTvb854qSgkpY/UGKLW9w7ISXGrN0FR/QdXTkjs0D+EfMFMTB+CGiIYvBoFXexYwGUD5FD8xVU89mw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="./js/mixitup.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
+
 </html>
