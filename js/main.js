@@ -18,9 +18,25 @@ $(function () {
     draggable: false,
     waitForAnimate: false,
     dots: true,
+    speed: 700,
     prevArrow: $('.team__slider-prev'),
     nextArrow: $('.team__slider-next'),
     appendDots: $('.review__bottom--lines')
     });
 
+    $('.questions__list--top').on('click', function(e) {
+      // e.preventDefault();
+      // $(this).toggleClass('questions__list--top-active');
+      // $(this).closest('.questions__list').find('.questions__list--title').slideToggle();
+      e.preventDefault();
+      if ($(this).hasClass('questions__list--top-active')) {
+        $(this).removeClass('questions__list--top-active')
+        $(this).closest('.questions__list').find('.questions__list--title').slideUp();
+      } else {
+        $('.questions__list--top').removeClass('questions__list--top-active')
+        $('.questions__list--title').slideUp()
+        $(this).addClass('questions__list--top-active')
+        $(this).closest('.questions__list').find('.questions__list--title').slideDown();
+      }
+  });
 });

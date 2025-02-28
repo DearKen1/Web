@@ -363,38 +363,60 @@
     <section class="questions">
       <h2 class="questions__heading">Frequently Asked Questions</h2>
       <ul class="questions__container">
-        <li class="questions__list--active">
-          <div class="questions__list--top">
-            <p class="questions__list--heading">How long should a car repair take?</p>
-            <div class="questions__list--img"><img src="./img/Minus.svg" alt="minus"></div>
-          </div>
-          <p class="questions__list--title">I have got my car repaired at Finsweet many times before, they are good at
+        <li class="questions__list">
+          <a class="questions__list-link" href="">
+            <div class="questions__list--top">
+              <p class="questions__list--heading">How long should a car repair take?</p>
+              <div class="questions__list-switch"></div>
+            </div>
+          </a>
+          <p class="questions__list--title" style="display: none">I have got my car repaired at Finsweet many times before, they are good at
+            what they do. Not only did
+            they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
+        </li>
+        <li class="questions__list ">
+          <a class="questions__list-link" href="">
+            <div class="questions__list--top">
+              <p class="questions__list--heading">How do I schedule my car's appointment ?</p>
+              <div class="questions__list-switch"></div>
+            </div>
+          </a>
+          <p class="questions__list--title" style="display: none">I have got my car repaired at Finsweet many times before, they are good at
+            what they do. Not only did
+            they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
+        </li>
+        <li class="questions__list ">
+          <a class="questions__list-link" href="">
+            <div class="questions__list--top">
+              <p class="questions__list--heading">What are the repair services provided?</p>
+              <div class="questions__list-switch"></div>
+            </div>
+          </a>
+          <p class="questions__list--title" style="display: none">I have got my car repaired at Finsweet many times before, they are good at
+            what they do. Not only did
+            they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
+        </li>
+        <li class="questions__list ">
+          <a class="questions__list-link" href="">
+            <div class="questions__list--top">
+              <p class="questions__list--heading">How do I find auto body shops near me?</p>
+              <div class="questions__list-switch"></div>
+            </div>
+          </a>
+          <p class="questions__list--title" style="display: none">I have got my car repaired at Finsweet many times before, they are good at
             what they do. Not only did
             they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
         </li>
         <li class="questions__list">
-          <div class="questions__list--top">
-            <p class="questions__list--heading">How do I schedule my car's appointment ?</p>
-            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-          </div>
-        </li>
-        <li class="questions__list">
-          <div class="questions__list--top">
-            <p class="questions__list--heading">What are the repair services provided?</p>
-            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-          </div>
-        </li>
-        <li class="questions__list">
-          <div class="questions__list--top">
-            <p class="questions__list--heading">How do I find auto body shops near me?</p>
-            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-          </div>
-        </li>
-        <li class="questions__list">
-          <div class="questions__list--top">
-            <p class="questions__list--heading">Genuine spare parts during car repair?</p>
-            <div class="questions__list--img"><img src="./img/Plus.svg" alt="plus"></div>
-          </div>
+          <a class="questions__list-link" href="">
+            <div class="questions__list--top">
+              <p class="questions__list--heading">Genuine spare parts during car repair?</p>
+              <div class="questions__list-switch"></div>
+            </div>
+          </a>
+          <p class="questions__list--title" style="display: none">I have got my car repaired at Finsweet many times before, they are good at
+            what they do. Not only did
+            they repair my car I have got my car repaired at Finsweet I have got my car repaired at Finsweet</p>
         </li>
       </ul>
     </section>
@@ -402,11 +424,15 @@
       <div class="form-top">
         <div class="form__left">
           <h1 class="form__left--heading">Get in touch with our experts</h1>
-          <input class="form__input" type="text" placeholder="Your full Name">
-          <input class="form__input" type="email" placeholder="Your Email">
-          <input class="form__input" type="text" placeholder="Select service type">
-          <input class="form__input" type="text" placeholder="Message">
-          <button class="form__button" type="submit">Send Message</button>
+          <input class="form__input" type="text" placeholder="Your full Name" required>
+          <input class="form__input" type="email" placeholder="Your Email" required>
+          <input class="form__input" type="text" placeholder="Select service type" required>
+          <input class="form__input" type="text" placeholder="Message" required>
+          <div class="form-buttons">
+            <input class="form-buttons-input" type="checkbox" id="check">
+            <label class="form-text" for="check">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sapiente.</label>
+            <button class="form__button" type="submit">Send Message</button>
+          </div>
         </div>
         <div class="form__right">
           <span class="form__right--title">Address</span>
@@ -417,8 +443,8 @@
           <span class="form__right--title">Opening Hours</span>
           <p class="form__right--info">Monday to Friday 9:00 AM to 10:00 AM</p>
         </div>
-        <img class="form__img" src="./img/Map Image.png" alt="map">
       </div>
+      <div class="map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A469dd7557dd970cd1ad897cffd2270d1163e6224d038fa0ab3c10531784390b6&amp;max-width=1280&amp;height=512&amp;lang=ru_RU&amp;scroll=true"></script></div>
       <div class="form__bottom">
       </div>
     </section>
